@@ -1,4 +1,12 @@
 
+const Discord = require('discord.js');
+const fs = require('fs');
+const client = new Discord.Client();
+var prefix = "-";
+var dat = JSON.parse("{}");
+
+
+
 client.on('ready',  () => {
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
@@ -9,12 +17,6 @@ console.log(`Logged in as  * [ "  Team #Plus Bot " ] servers! [ " ${client.guild
 
 });
 
-client.on('ready', () => {
-    console.log('Bot Is Ready Now !');
-    client.user.setGame(`Welcome To Found Fun`,"http://twitch.tv/xkilleryt")
-    });
-
-
 client.on('message', msg => {
   if (msg.content === '-شغال bc') {
     msg.reply('يب انا شغال');
@@ -22,7 +24,10 @@ client.on('message', msg => {
 });
 
 
-
+client.on('ready', () => {
+    console.log('Bot Is Ready Now !');
+    client.user.setGame(`inv | -bc`,"http://twitch.tv/xkilleryt")
+    });
 
 
 
@@ -71,6 +76,10 @@ msg.delete();
 })
 }
 });
+
+
+
+
 
 
 
